@@ -15,7 +15,7 @@ private final CreatDocService creatDocService;
     }
 
     @PostMapping("/ismp.crpt.ru/api/v3/lk/documents/create")
-    public ResponseEntity<Document> addDocument(@PathVariable("id") Long id,
+    public ResponseEntity<Document> addDocument(@PathVariable("id") String id,
                                                 @RequestBody CreatDocService creatDocService) {
         return ResponseEntity.ok(creatDocService.addDoc(id, creatDocService));
     }
